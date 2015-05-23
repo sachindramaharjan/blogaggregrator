@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Aggregrator:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Aggregrator.war">
+      <element id="artifact" artifact-name="Aggregrator:war exploded" />
+    </root>
+  </artifact>
+</component>
