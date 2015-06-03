@@ -1,5 +1,6 @@
 package com.springapp.mvc.entity;
 
+import com.springapp.mvc.com.springapp.mvc.validator.UniqueUsernameValidator;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -18,7 +19,8 @@ public class User {
     @Column(name = "user_id")
     private int userid;
 
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
+    //@UniqueUsernameValidator(message="Username already exists")
     private String name;
 
     @Column(name = "email")

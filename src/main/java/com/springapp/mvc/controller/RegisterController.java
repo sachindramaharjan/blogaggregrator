@@ -4,9 +4,7 @@ import com.springapp.mvc.entity.User;
 import com.springapp.mvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by sachindra on 02/06/2015.
@@ -33,5 +31,12 @@ public class RegisterController {
     public String doRegister(@ModelAttribute("user") User user) {
         userService.save(user);
         return "redirect:/register.html?success=true";
+    }
+
+    @RequestMapping("/available")
+    @ResponseBody
+    public String isAvailable(@RequestParam("username") String username) {
+        Boolean available = userService.findUsername(username) == null;
+        return available.toString();
     }
 }
