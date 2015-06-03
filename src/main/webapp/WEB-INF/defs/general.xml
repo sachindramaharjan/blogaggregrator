@@ -20,8 +20,30 @@
     </definition>
 
     <definition name="user_detail" extends="common">
-        <put-attribute name="title" value="UserDetail" />
+        <put-attribute name="title" value="User Detail" />
         <put-attribute name="body"  value="/WEB-INF/pages/user_detail.jsp"/>
         <put-attribute name="current" value="users"/>
+    </definition>
+
+    <definition name="user_account" extends="common">
+        <put-attribute name="title" value="User Account" />
+        <put-attribute name="body"  value="/WEB-INF/pages/user_account.jsp"/>
+        <put-attribute name="current" value="account"/>
+    </definition>
+
+    <definition name="user-register" extends="common">
+        <put-attribute name="title" value="User Register" />
+        <put-attribute name="body"  value="/WEB-INF/pages/user-register.jsp"/>
+        <put-attribute name="current" value="register"/>
+    </definition>
+    <definition name="user-login" extends="common">
+        <put-attribute name="title" value="User Login" />
+        <put-attribute name="body"  value="/WEB-INF/pages/user-login.jsp"/>
+        <put-attribute name="current" value="login"/>
+    </definition>
+    <definition name="user-logout" extends="common">
+        <put-attribute name="title" value="User Logout" />
+        <put-attribute name="body"  value="/WEB-INF/pages/user-logout.jsp"/>
+        <put-attribute name="current" value="logout"/>
     </definition>
 </tiles-definitions>

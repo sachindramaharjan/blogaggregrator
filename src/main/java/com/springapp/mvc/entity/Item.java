@@ -6,6 +6,7 @@ import javax.persistence.*;
  * Created by sachindra on 22/05/2015.
  */
 @Entity
+@Table(name = "item")
 public class Item {
 
     @Id
@@ -13,11 +14,14 @@ public class Item {
     @Column(name = "item_id")
     private int itemid;
 
+    @Column(name = "title")
+    private String title;
+
     @Column(name = "description")
     private String description;
 
     @Column(name = "published_date")
-    private String publisedDate;
+    private String publishedDate;
 
     @Column(name = "link")
     private String link;
@@ -32,6 +36,14 @@ public class Item {
 
     public void setItemid(int itemid) {
         this.itemid = itemid;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Blog getBlog() {
@@ -51,11 +63,11 @@ public class Item {
     }
 
     public String getPublisedDate() {
-        return publisedDate;
+        return publishedDate;
     }
 
     public void setPublisedDate(String publisedDate) {
-        this.publisedDate = publisedDate;
+        this.publishedDate = publisedDate;
     }
 
     public String getLink() {

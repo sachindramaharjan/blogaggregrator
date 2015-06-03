@@ -1,12 +1,16 @@
 package com.springapp.mvc.entity;
 
+import org.hibernate.validator.constraints.URL;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
  * Created by sachindra on 22/05/2015.
  */
 @Entity
+@Table(name = "blog")
 public class Blog {
     @Id
     @GeneratedValue
@@ -23,7 +27,7 @@ public class Blog {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "blog")
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.REMOVE)
     private List<Item> itemlist;
 
     public int getBlogid() {

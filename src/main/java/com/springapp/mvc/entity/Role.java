@@ -9,6 +9,7 @@ import java.util.List;
  * Created by sachindra on 22/05/2015.
  */
 @Entity
+@Table(name = "role")
 public class Role {
     @Id
     @GeneratedValue

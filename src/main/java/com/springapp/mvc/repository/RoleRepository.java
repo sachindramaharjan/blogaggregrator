@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Created by sachindra on 22/05/2015.
  */
 public interface RoleRepository extends JpaRepository<Role, Integer>{
-
+    Role findByName(String name);
 }
